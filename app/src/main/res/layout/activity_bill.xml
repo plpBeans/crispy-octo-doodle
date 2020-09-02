@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_activity_fragment"
+    tools:context="vip.hengnai.wine.ui.mine.bill.BillActivity">
+    <include
+        layout="@layout/header_layout"
+        android:id="@+id/header"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swiprefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_bill"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/recyclerview"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+        <Button
+            android:id="@+id/btn_bill"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/margin_15"
+            android:layout_width="match_parent"
+            android:text="申请开票"
+            android:textSize="@dimen/text_15"
+            android:textColor="@color/white"
+            android:background="@mipmap/btn_xiugai"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</LinearLayout>

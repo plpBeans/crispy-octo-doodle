@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff000000</color>
+    <color name="colorPrimaryDark">#ff000000</color>
+    <color name="colorAccent">#ff000000</color>
+    <color name="wonder_bottom_choose">#ff000000</color>
+    <color name="wonder_bottom_no_choose">#ff909090</color>
+    <color name="text_gray">#898989</color>
+    <color name="green">#00B689</color>
+    <color name="black">#000000</color>
+    <color name="text_title_black3">#333333</color>
+    <color name="text_title_black4">#444444</color>
+    <color name="white">#ffffff</color>
+    <color name="text_gray6">#666666</color>
+    <color name="bg_activity_fragment">#F5F6F7</color>
+    <color name="line">#EBEBEB</color>
+    <color name="lunarTextColor">#666666</color>
+    <color name="hintColor">#999999</color>
+    <color name="stretchTextColor">#666666</color>
+    <color name="addressRemind">#8C9192</color>
+    <color name="shop">#474342</color>
+    <color name="start_location">#FF88AD9F</color>
+    <color name="shop_gray">#FF8D9092</color>
+    <color name="login_gray">#626262</color>
+
+    <color name="most_black">#333434</color>
+
+    <color name="choose">#474342</color>
+    <color name="no_choose">#D7DFE7</color>
+
+
+
+    <!-- **************************pickerview选择器常用颜色值********************************** -->
+    <color name="pickerview_divider_color">#9D9D9D</color>
+    <color name="pickerview_cancel_text_color">#979696</color>
+    <color name="pickerview_center_text_color">#333333</color>
+</resources>

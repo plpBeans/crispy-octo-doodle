@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="vip.hengnai.wine.ui.mine.beer.BeerActivity">
+    <include
+        layout="@layout/header_layout"
+        android:id="@+id/header"
+        />
+    <vip.hengnai.wine.view.NewBanner
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:indicator_margin="@dimen/margin_10"
+        app:indicator_width="@dimen/margin_10"
+        android:layout_margin="@dimen/margin_10"
+        app:indicator_drawable_selected="@mipmap/banner_choose"
+        app:indicator_drawable_unselected="@mipmap/banner_no_choose"/>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swiprefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/recyclerview"
+            android:background="@color/white"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

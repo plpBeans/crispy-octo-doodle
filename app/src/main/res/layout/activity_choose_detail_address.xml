@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    tools:context=".ui.menu.personaddress.choosedetailaddress.ChooseDetailAddressActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/imageBack"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:src="@mipmap/ic_address_back_arrow"
+            android:layout_marginLeft="@dimen/margin_10"
+            />
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tx_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="8dp"
+            android:autoSizeMaxTextSize="16dp"
+            android:textColor="@color/black"
+            android:text="上海"
+            android:layout_marginLeft="@dimen/margin_15"
+            android:layout_toRightOf="@+id/imageBack"/>
+        <EditText
+            android:id="@+id/choose_address_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/tx_location"
+            android:background="@color/white"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:hint="输入地址"
+            android:textSize="@dimen/text_16"
+            />
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

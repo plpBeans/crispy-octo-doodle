@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/margin_10"
+    android:background="@drawable/bg_circle_white">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_height="@dimen/margin_30">
+
+        <TextView
+            android:id="@+id/tx_peopleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:text="宋志鹏"
+            android:layout_centerVertical="true"
+            android:textColor="@color/text_title_black3"
+            android:textSize="@dimen/text_15" />
+        <TextView
+            android:id="@+id/tx_isOpen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已开具"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/text_13"
+            android:textColor="@color/text_gray6"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_height="@dimen/margin_30"
+        android:layout_marginBottom="@dimen/margin_10">
+
+        <TextView
+            android:id="@+id/tx_orderPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:text="¥207.88"
+            android:layout_centerVertical="true"
+            android:textColor="#EB5D2A"
+            android:textSize="@dimen/text_15" />
+        <TextView
+            android:id="@+id/tx_isElectron"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="电子发票"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/text_11"
+            android:textColor="@color/hintColor"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_toRightOf="@+id/tx_orderPrice"
+            />
+        <TextView
+            android:id="@+id/tx_orderTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2019.12.02"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/text_13"
+            android:textColor="@color/hintColor"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">all for you</string>
+  <string name="load_more_loading">正在加载...</string>
+  <string name="load_more_no_more">没有更多了</string>
+    <string name="login_ing">正在登录...</string>
+  <string name="loading">正在加载...</string>
+    <string name="nfc_activity_divice_not_support_nfc">设备不支持NFC</string>
+  <string name="nfc_activity_dialog_message_enable_nfc">请在系统设置中先启用NFC功能</string>
+  <string name="nfc_activity_dialog_btn_enable_nfc">去开启</string>
+  <string name="nfc_activity_dialog_btn_no">不了</string>
+
+
+    <string name="no_result">对不起，没有搜索到相关数据！</string>
+
+</resources>

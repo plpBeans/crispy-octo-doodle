@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_activity_fragment"
+    tools:context="vip.hengnai.wine.ui.mine.bill.BillManagerActivity">
+    <include
+        layout="@layout/header_layout"
+        android:id="@+id/header"
+        />
+    <RelativeLayout
+        android:id="@+id/rl_bill"
+        android:layout_width="match_parent"
+        android:background="@drawable/bg_circle_white"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:layout_height="@dimen/margin_50">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_50"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_toRightOf="@+id/img_member"
+            android:gravity="center_vertical"
+            android:text="按订单开票"
+            android:textColor="@color/most_black"
+            android:textSize="@dimen/text_15" />
+
+        <ImageView
+            android:layout_width="@dimen/margin_15"
+            android:layout_height="@dimen/margin_15"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_20"
+            android:src="@mipmap/ic_jiantou" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_billHistory"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margin_10"
+        android:background="@drawable/bg_circle_white"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:layout_height="@dimen/margin_50">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_50"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_toRightOf="@+id/img_member"
+            android:gravity="center_vertical"
+            android:text="发票记录"
+            android:textColor="@color/most_black"
+            android:textSize="@dimen/text_15" />
+
+        <ImageView
+            android:layout_width="@dimen/margin_15"
+            android:layout_height="@dimen/margin_15"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_20"
+            android:src="@mipmap/ic_jiantou" />
+    </RelativeLayout>
+
+</LinearLayout>

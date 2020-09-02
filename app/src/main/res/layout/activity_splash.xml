@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.SplashActivity">
+    <RelativeLayout
+        android:id="@+id/ad_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:scaleType="centerCrop"
+            android:id="@+id/ad_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/bg_splash"/>
+        <TextView
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="#FF0000"
+            android:background="#80ffffff"
+            android:text="跳过3"
+            android:id="@+id/ad_time_tv"
+            android:layout_width="55dp"
+            android:layout_height="28dp"/>
+    </RelativeLayout>
+</RelativeLayout>

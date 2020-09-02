@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:orientation="horizontal"
+    android:layout_marginTop="@dimen/margin_10"
+    android:gravity="center_vertical"
+    android:background="@drawable/bg_circle_white">
+   <ImageView
+       android:id="@+id/img_select"
+       android:layout_width="@dimen/margin_20"
+       android:layout_height="@dimen/margin_20"
+       android:layout_marginLeft="@dimen/margin_20"
+       android:src="@mipmap/bg_moren"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_15"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tx_billPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开票金额：¥ 23"
+            android:textColor="@color/most_black"
+            android:textSize="@dimen/text_15"/>
+        <TextView
+            android:id="@+id/tx_billNumber"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_height="wrap_content"
+            android:text="订单号：ER33455644"
+            android:textColor="@color/most_black"
+            android:textSize="@dimen/text_15"/>
+        <TextView
+            android:id="@+id/tx_billTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            android:text="下单时间：2019/12/02 09:30"
+            android:textColor="@color/most_black"
+            android:textSize="@dimen/text_15"/>
+    </LinearLayout>
+</LinearLayout>

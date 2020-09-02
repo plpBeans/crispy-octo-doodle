@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/margin_15"
+        android:paddingTop="@dimen/margin_10"
+        android:paddingBottom="@dimen/margin_10"
+        android:paddingLeft="@dimen/margin_15">
+        <vip.hengnai.wine.view.SuperTextView
+            android:id="@+id/tx_beer"
+            android:ellipsize="end"
+            android:text="·用绚丽的彩照记录穷游 柬埔寨"
+            android:textStyle="bold"
+            android:textColor="@color/most_black"
+            android:textSize="@dimen/text_15"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_120"
+            android:layout_toLeftOf="@+id/img_beer"/>
+        <ImageView
+            android:id="@+id/img_beer"
+            android:layout_width="@dimen/margin_160"
+            android:layout_height="@dimen/margin_120"
+            android:layout_marginLeft="@dimen/margin_25"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/bg_beer"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发布人:全代运营"
+            android:textSize="@dimen/text_14"
+            android:layout_marginLeft="@dimen/margin_20"/>
+        <TextView
+            android:id="@+id/tx_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发布时间:19/12/13 09:30"
+            android:textSize="@dimen/text_14"
+            android:layout_marginLeft="@dimen/margin_35"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_marginRight="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_10"
+        android:background="#d8d8d8"/>
+</LinearLayout>

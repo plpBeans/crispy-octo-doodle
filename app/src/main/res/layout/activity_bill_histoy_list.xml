@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_activity_fragment"
+    tools:context="vip.hengnai.wine.ui.mine.bill.BillActivity">
+    <include
+        layout="@layout/header_layout"
+        android:id="@+id/header"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_100"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/margin_20"
+        android:background="@mipmap/bg_pic">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_80"
+       >
+        <ImageView
+            android:id="@+id/img_money"
+            android:layout_width="@dimen/margin_20"
+            android:layout_height="@dimen/margin_20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="@dimen/margin_30"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/order_success"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:gravity="center|left"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/img_money">
+
+            <TextView
+                android:id="@+id/tx_distribution"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="可开具的发票清单"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_16" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:text="请尽快按步骤开具发票，逾期将过期。"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_12" />
+        </LinearLayout>
+    </RelativeLayout>
+    </LinearLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swiprefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-20dp"
+        android:layout_marginLeft="@dimen/margin_15"
+        android:layout_marginRight="@dimen/margin_15">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/recyclerview"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

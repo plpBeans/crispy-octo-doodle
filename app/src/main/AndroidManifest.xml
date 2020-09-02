@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="vip.hengnai.wine">
+
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <!-- 相机 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 请求网络 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 不是SDK需要的权限，是示例中的后台唤醒定位需要的权限 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- 需要运行时注册的权限 -->
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于提高GPS定位速度 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 读取缓存数据 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- 更改设置 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <!-- 如果设置了target >= 28 如果需要启动后台定位则必须声明这个权限 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!-- 如果您的应用需要后台定位权限，且有可能运行在Android Q设备上,并且设置了target>28，必须增加这个权限声明 -->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <application
+        android:name=".SellWineApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <!-- 高德地图开始 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="68d96a9a69e6834955ac85276661223c" />
+
+        <!-- 定位需要的服务 适配Android Q需要加上android:foregroundServiceType="location" -->
+        <service
+            android:name="com.amap.api.location.APSService"
+            android:foregroundServiceType="location" />
+        <!-- 高德地图结束 -->
+
+
+        <!-- 极光推送开始 -->
+        <receiver
+            android:name=".push.WineReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".push.WineService"
+            android:process=":pushcore">
+            <intent-filter>
+                <action android:name="cn.jiguang.user.service.action" />
+            </intent-filter>
+        </service>
+
+        <!-- 极光推送结束 -->
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.MyInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.SplashActivity"
+            android:screenOrientation="portrait">
+
+            <!-- android:theme="@style/AppTheme.Transparent"> -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.menu.personaddress.PersonAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.menu.personaddress.ModifyAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.menu.personaddress.choosedetailaddress.ChooseDetailAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.menu.shopaddress.ShopAndAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.menu.shopaddress.shopdetail.ShopDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.menu.shopaddress.shopdetail.photoview.ShowPhotoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.login.SetGestureLockActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.login.GestureLockActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.login.WxLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.menu.goods.GoodsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.order.coupon.OrderOrderCouponActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.order.confirm.OrderConfirmActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.bill.BillActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.bill.BillHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.bill.BillHistoryListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.integral.IntegralActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.bill.BillDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.bill.BillManagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.member.MemberCenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.beer.BeerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.beer.BeerDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.message.MessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.message.detail.MessageDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.zxing.ZxingActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.order.detail.OrderDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

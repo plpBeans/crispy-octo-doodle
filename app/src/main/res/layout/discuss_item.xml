@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_10"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/tx_discuss"
+        android:layout_width="match_parent"
+        android:layout_marginRight="@dimen/margin_15"
+        android:layout_marginLeft="@dimen/margin_15"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/dis_moren"
+        android:gravity="center"
+        android:text="口味棒"
+        android:textColor="#505050"
+        android:textSize="@dimen/text_12" />
+</LinearLayout>
